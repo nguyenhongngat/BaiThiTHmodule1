@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = +prompt("Nhập số nguyên x: ");
+
+    function kiemtraSNT(N) {
+        if (N < 2) {
+            return false;
+        }
+        if (N >= 2) {
+            for (let i = 2; i < N; i++) {
+                if (N % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    function sumOfListPrime(number) {
+        let sum = 0;
+        for (let i = 0; i <= number; i++) {
+            if (kiemtraSNT(i) === true) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    alert(sumOfListPrime(x));
+</script>
+</body>
+</html>
